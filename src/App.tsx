@@ -14,8 +14,12 @@ const App = () => {
     <div className="app-container">
       <Header />
       <main className="main-content">
-        <BlogPost entradaMostrada={entrada} listadoEntradas={entradas} />
-        <SideBar entradaMostrada={entrada} entradas={entradas} />
+        { entrada == undefined ? <p>La entrada no existe</p> : 
+        <>
+          <BlogPost entradaMostrada={entrada} listadoEntradas={entradas} />
+          <SideBar entradaMostrada={entrada} entradas={entradas} />
+        </>
+        }
       </main>
       <Footer />
     </div>

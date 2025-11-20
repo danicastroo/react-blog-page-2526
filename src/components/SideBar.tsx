@@ -9,7 +9,7 @@ interface SideBarProps {
 }
 
 function SideBar({entradaMostrada, entradas} : SideBarProps) {
-    const entradasMismaCategoria = entradas.filter((entrada) => entrada.categoria == entradaMostrada.categoria)
+    const entradasMismaCategoria = entradas.filter((entrada) => entrada.categoria == entradaMostrada.categoria && entrada.id != entradaMostrada.id)
 
     return (
     <aside className="sidebar">
