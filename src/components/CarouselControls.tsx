@@ -1,7 +1,7 @@
 interface CarouselControlsProps {
   indiceActivo: number,
   setIndiceActivo: React.Dispatch<React.SetStateAction<number>>,
-  ciclo: boolean
+  ciclo?: boolean
 }
 
 function CarouselControls( { indiceActivo, setIndiceActivo, ciclo = true } : CarouselControlsProps) {
@@ -13,6 +13,7 @@ function CarouselControls( { indiceActivo, setIndiceActivo, ciclo = true } : Car
   function handleRightClick(){
       setIndiceActivo(indiceActivo +1);
   }
+  console.log(ciclo); // Borrar cuando esté implementado el control
   return (
     <div className="carousel-controls">
       <button className="carousel-btn" onClick={handleLeftClick}>&lt;</button>
